@@ -1,0 +1,4 @@
+---
+# tasks file for ctrl_alt_del
+- name: Disable Ctrl Alt Delete
+  command: 'ln -s /dev/null /etc/systemd/system/ctrl-alt-del.target'

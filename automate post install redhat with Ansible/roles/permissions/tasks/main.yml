@@ -1,0 +1,9 @@
+---
+# tasks file for permissions
+- name: Set cron files permission
+  shell: |
+          chmod o-rwx /etc/cron.hourly
+          chmod o-rwx /etc/cron.daily
+          chmod o-rwx /etc/cron.weekly
+          chmod o-rwx /etc/cron.monthly
+          chmod o-rx /etc/cron.d 

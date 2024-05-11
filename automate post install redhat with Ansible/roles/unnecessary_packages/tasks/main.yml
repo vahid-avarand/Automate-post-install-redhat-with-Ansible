@@ -1,0 +1,6 @@
+---
+# tasks file for unnecessary_packages
+- name: Remove Wireless Drivers
+  yum:
+     state: absent
+     name: 'iwl*'

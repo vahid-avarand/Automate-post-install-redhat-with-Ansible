@@ -1,0 +1,14 @@
+---
+- hosts: all
+  roles:
+  
+    - selinux
+    - firewall
+    - ctrl_alt_del
+    - snmp
+    - ftp
+    - unnecessary_packages
+    - audit_log
+    - audit_rules
+    - auditd
+

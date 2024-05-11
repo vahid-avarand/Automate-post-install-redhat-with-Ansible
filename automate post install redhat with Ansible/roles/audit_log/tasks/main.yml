@@ -1,0 +1,16 @@
+---
+# tasks file for audit_log
+- name: Security Policy auditlog
+  shell: |
+          sed -i '/max_log_file = 8/s/^/#/g' /etc/audit/auditd.conf
+          sed -i '/space_left_action = SYSLOG/s/^/#/g' /etc/audit/auditd.conf
+          echo "" >> /etc/audit/auditd.conf
+          echo "#####################" >> /etc/audit/auditd.conf
+          echo "## Security policy ##" >> /etc/audit/auditd.conf
+          echo "#####################" >> /etc/audit/auditd.conf
+          echo "max_log_file = 20" >> /etc/audit/auditd.conf
+          echo "" >> /etc/audit/auditd.conf
+          echo "space_left_action = email" >> /etc/audit/auditd.conf
+          echo "" >> /etc/audit/auditd.conf
+          echo "## By default is set action_mail_acct = root" >> /etc/audit/auditd.conf
+

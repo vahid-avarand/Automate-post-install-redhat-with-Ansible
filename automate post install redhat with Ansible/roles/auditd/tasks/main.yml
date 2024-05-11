@@ -1,0 +1,5 @@
+---
+# tasks file for auditd
+- name: restart auditd service
+  shell: "service auditd restart"
+
